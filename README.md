@@ -1,26 +1,38 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+This is a [Ionic](http://ionicframework.com) based app.
 
-## How to use this template
+# Sales and stock manager
+This is a Ionic-Angular app with TypeScript to manage the sales and stock of a little store.
+[Logo](https://github.com/MilizianDevops/sales-stock-manager/tree/master/src/assets/icon/logo-ssm-letra-alpha.png)
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+## Table of Contents
+ - [Getting Started](#getting-started)
+ - [App Preview](#app-preview)
+ - [File Structure of App](#file-structure-of-app)
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+## Getting Started
 
-### With the Ionic CLI:
+* Clone this repository: `git clone https://github.com/MilizianDevops/sales-stock-manager`.
+* Remember we use TypeScript.
+* Run `npm install` from the project root.
+* Install the ionic CLI (`npm install -g ionic`)
+* Run `ionic serve` in a terminal from the project root.
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+
+* If want to run it on physical device, cd into `sales-stock-manager`:
 
 ```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myTabs tabs
+$ ionic cordova platform add android
+$ ionic cordova run android <--target>
 ```
 
-Then, to run it, cd into `myTabs` and run:
-
+**Note:**
+* Want to select `--target` device
 ```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+platform/android>$ adb devices
 ```
 
-Substitute ios for android if not on a Mac.
+* Is your build slow? Update `npm` to 3.x:
+```bash
+npm install -g npm
+```
 
