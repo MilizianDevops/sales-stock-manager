@@ -2,7 +2,7 @@ This is a [Ionic](http://ionicframework.com) based app.
 
 # Sales and stock manager
 This is a Ionic-Angular app with TypeScript to manage the sales and stock of a little store.
-[Logo](https://github.com/MilizianDevops/sales-stock-manager/tree/master/src/assets/img/logo-ssm-letra-alpha.png)
+<img src="https://github.com/MilizianDevops/sales-stock-manager/tree/master/src/assets/img/logo-ssm-letra-alpha.png" width="500">
 
 ## Table of Contents
  - [Getting Started](#getting-started)
