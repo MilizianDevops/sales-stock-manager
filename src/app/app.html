@@ -1,1 +1,61 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-split-pane>
+
+    <!-- logged out menu -->
+    <ion-menu id="loggedOutMenu" [content]="content">
+
+        <ion-content class="outer-content">
+
+            <ion-grid class="menu-profile-grid">
+                <ion-row>
+                    <ion-col col-auto>
+                        <img class="img-rounded" src="../assets/img/trump.png" style="max-height: 6em">
+                    </ion-col>
+                    <ion-col offset-8>
+                        <ion-icon item-start name="camera" isActive="false"></ion-icon>
+
+                    </ion-col>
+                    <ion-col col-12 text-left>
+                        <strong>Donald Trump</strong>
+                        <p class="menu-profile-role">Administrador</p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+            <ion-list>
+                <ion-list-header>
+                    Ventas
+                </ion-list-header>
+                <button ion-item menuClose *ngFor="let p of firstSectionPages" (click)="openPage(p)">
+                    <ion-icon item-start [name]="p.icon" isActive="true"></ion-icon>
+                    {{p.title}}
+                </button>
+            </ion-list>
+
+            <ion-list>
+                <ion-list-header>
+                    Stock
+                </ion-list-header>
+                <button ion-item menuClose *ngFor="let p of secondSectionPages" (click)="openPage(p)">
+          <ion-icon item-start [name]="p.icon" isActive="false"></ion-icon>
+          {{p.title}}
+        </button>
+            </ion-list>
+
+            <ion-list>
+                <ion-list-header>
+                    Otros
+                </ion-list-header>
+                <button ion-item menuClose *ngFor="let p of otherPages" (click)="openPage(p)">
+          <ion-icon item-start [name]="p.icon" isActive="p.isActive"></ion-icon>
+          {{p.title}}
+        </button>
+            </ion-list>
+        </ion-content>
+
+    </ion-menu>
+
+
+    <!-- main navigation -->
+    <ion-nav [root]="rootPage" #content swipeBackEnabled="p.isActive" main></ion-nav>
+
+</ion-split-pane>
