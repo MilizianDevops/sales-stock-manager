@@ -1,0 +1,10 @@
+version: '2'
+services:
+    app:
+        container_name: karma2_ionic
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - .:/sales-stock-manager
+            - ~/.gradle:/root/.gradle
