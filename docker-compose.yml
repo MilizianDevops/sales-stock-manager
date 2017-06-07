@@ -1,10 +1,8 @@
 version: '2'
 services:
     app:
-        container_name: karma2_ionic
-        build:
-            context: .
-            dockerfile: Dockerfile
-        volumes:
-            - .:/sales-stock-manager
-            - ~/.gradle:/root/.gradle
+        image: marcocab/docker-app-sales
+        ports:
+              - '8100:8100'
+              - '35729:35729'
+        command: ionic serve -lab
