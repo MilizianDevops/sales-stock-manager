@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/MilizianDevops/sales-stock-manager.svg?branch=master)](https://travis-ci.org/MilizianDevops/sales-stock-manager)
+
 This is a [Ionic](http://ionicframework.com) based app.
 
 # Sales and stock manager
