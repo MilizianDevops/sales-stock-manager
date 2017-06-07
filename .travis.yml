@@ -5,7 +5,11 @@ language: node
 services:
   - docker
 
-script: docker run --name travis-test marcocab/ssm-git /bin/sh -c "ionic cordova platform add android && ionic cordova build android"
+before_script: docker build -t marcocab/docker-app-sales
+
+script: docker run --name travis-test marcocab/docker-app-sales /bin/sh -c "ionic cordova platform add android && ionic cordova build android"
 
 after_script:
   - docker stop travis-test
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker push marcocab/docker-app-sales
