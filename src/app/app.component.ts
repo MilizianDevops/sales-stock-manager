@@ -29,19 +29,22 @@ export class MyApp {
   rootPage: any = TabsPage;
 
   firstSectionPages: PageInterface[] = [
-    { title: 'Nueva Venta', name: 'TabsPage', component: TabsPage, tabComponent: HomePage, index: 0, icon: 'cart' },
-    { title: 'Balance de Ventas', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'stats' },
+    { title: 'Panel de control', name: 'TabsPage', component: TabsPage, tabComponent: HomePage, index: 0, icon: 'home' },
+    { title: 'Nueva Venta', name: 'TabsPage', component: TabsPage, tabComponent: HomePage, index: 1, icon: 'cart' },
+    { title: 'Balance de Ventas', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 2, icon: 'stats' },
   ];
   secondSectionPages: PageInterface[] = [
-    { title: 'Añadir stock', name: 'TabsPage', component: TabsPage, tabComponent: ContactPage, index: 2, icon: 'add' },
-    { title: 'Stock disponible', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 3, icon: 'cube' },
-    { title: 'Proveedores', name: 'TabsPage', component: TabsPage, tabComponent: ContactPage, index: 2, icon: 'contacts' },
+    { title: 'Añadir stock', name: 'TabsPage', component: TabsPage, tabComponent: ContactPage, index: 3, icon: 'add-circle' },
+    { title: 'Stock disponible', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 4, icon: 'cube' },
+    { title: 'Proveedores', name: 'TabsPage', component: TabsPage, tabComponent: ContactPage, index: 5, icon: 'contacts' },
   ];
   otherPages: PageInterface[] = [
-    { title: 'Mi cuenta', name: 'TabsPage', component: TabsPage, tabComponent: ContactPage, index: 2, icon: 'contact' },
-    { title: 'Ayuda', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 3, icon: 'help-buoy' }
+    { title: 'Mi cuenta', name: 'TabsPage', component: TabsPage, tabComponent: ContactPage, index: 6, icon: 'contact' },
+    { title: 'Ayuda', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 7, icon: 'help-circle' },
+    { title: 'Salir', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 8, icon: 'power' }
 
   ];
+
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
