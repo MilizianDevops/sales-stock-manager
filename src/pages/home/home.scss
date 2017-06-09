@@ -1,3 +1,79 @@
 page-home {
+    .background-image {
+        background-image: url(http://www.artsfon.com/download.php?file=201510/1920x1080/artsfon.com-73424.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 40vw;
+    }
+
+    .main-content {
+        padding: 25px;
+        background-color: white;
+        position: absolute;
+        .text-location-status {
+            margin-left: -10px;
+            font-size: 15px;
+            font-variant: small-caps;
+            ion-icon {
+                font-size: 25px;
+            }
+        }
+        .timeline-icon {
+            margin-top: 15px;
+            margin-left: 6px;
+            ion-icon {
+                margin-left: 1px;
+                top: 25px;
+                font-size: 33px;
+                position: absolute;
+                color: white;
+            }
+            ion-note{
+                margin-left: -10px;
+                font-variant: small-caps;
+                font-weight: bold;
+                font-size: 17px;
+            }
+            .circle {
+                border-radius: 50%;
+                margin-top: 10px;
+                margin-left: -10px;
+                width: 50px;
+                height: 50px;
+                background: -webkit-gradient(left top, color($colors, vibrant-bright), color($colors, vibrant) , rgba(173, 147, 198, 0.5));
+                background: -o-linear-gradient(bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
+                background: -moz-linear-gradient(bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
+                background: linear-gradient(to bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
+            }
+        }
+        .timeline-main-user{
+            margin-top: -5px;
+            ion-card{
+                border-right: 10px solid color($colors, secondary);
+                margin-left: -5px;
+             }
+            ion-note{
+                margin-left: 10px;
+                margin-left: 35px;
+            }
+        }
+        .timeline-main-other{
+            margin-top: -5px;
+             ion-card{
+                border-left: 10px solid color($colors, subtle);
+            }
+            ion-note{
+                margin-left: 150px;
+            }
+        }
+
+    }
 
 }
+
+
+
+
+
+
+
