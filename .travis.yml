@@ -11,5 +11,5 @@ script: docker run --name travis-test marcocab/docker-app-sales /bin/sh -c "ioni
 
 after_script:
   - docker stop travis-test
-  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - docker push marcocab/docker-app-sales
+  - if [[ $TRAVIS_BRANCH == 'master' ]]; then docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"; docker push marcocab/docker-app-sales; fi
+

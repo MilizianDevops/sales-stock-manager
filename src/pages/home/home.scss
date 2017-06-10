@@ -1,17 +1,25 @@
 page-home {
     .background-image {
-        background-image: url(http://www.artsfon.com/download.php?file=201510/1920x1080/artsfon.com-73424.jpg);
-        background-size: cover;
-        background-position: center;
-        height: 40vw;
+        background-image: url(../assets/img/blur-home-bg.png);
+        @media screen and (orientation:portrait) {
+            background-size: cover;
+            background-position: 50% 80%;
+            height: 25%;
+        }
+
+        @media screen and (orientation:landscape) {
+            background-size: cover;
+            background-position: 50% 65%;
+            height: 50%;
+        }
     }
 
     .main-content {
-        padding: 25px;
+        padding: 20px;
         background-color: white;
+        width: 100%;
         position: absolute;
         .text-location-status {
-            margin-left: -10px;
             font-size: 15px;
             font-variant: small-caps;
             ion-icon {
@@ -19,54 +27,84 @@ page-home {
             }
         }
         .timeline-icon {
-            margin-top: 15px;
-            margin-left: 6px;
-            ion-icon {
-                margin-left: 1px;
-                top: 25px;
-                font-size: 33px;
-                position: absolute;
-                color: white;
+            @media screen and (orientation:portrait) {
+                ion-icon {
+                    margin-left: 10px;
+                    top: 25px;
+                    font-size: 33px;
+                    position: absolute;
+                    color: white;
+                }
+                ion-note{
+                    margin-left: -5px;
+                    font-variant: small-caps;
+                    font-weight: bold;
+                    font-size: 17px;
+                }
+                .circle {
+                    border-radius: 50%;
+                    margin-top: 10px;
+                    width: 50px;
+                    height: 50px;
+                    background: -webkit-gradient(left top, color($colors, vibrant-bright), color($colors, vibrant) , rgba(173, 147, 198, 0.5));
+                    background: -o-linear-gradient(bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
+                    background: -moz-linear-gradient(bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
+                    background: linear-gradient(to bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
+                }
             }
-            ion-note{
-                margin-left: -10px;
-                font-variant: small-caps;
-                font-weight: bold;
-                font-size: 17px;
-            }
-            .circle {
-                border-radius: 50%;
-                margin-top: 10px;
-                margin-left: -10px;
-                width: 50px;
-                height: 50px;
-                background: -webkit-gradient(left top, color($colors, vibrant-bright), color($colors, vibrant) , rgba(173, 147, 198, 0.5));
-                background: -o-linear-gradient(bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
-                background: -moz-linear-gradient(bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
-                background: linear-gradient(to bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
+            @media screen and (orientation:landscape) {
+                ion-icon {
+                    margin-left: 11px;
+                    top: 25px;
+                    font-size: 33px;
+                    position: absolute;
+                    color: white;
+                }
+                ion-note{
+                    margin-left: -4px;
+                    font-variant: small-caps;
+                    font-weight: bold;
+                    font-size: 17px;
+                }
+                .circle {
+                    border-radius: 50%;
+                    margin-top: 10px;
+                    margin-left: -1px;
+                    width: 50px;
+                    height: 50px;
+                    background: -webkit-gradient(left top, color($colors, vibrant-bright), color($colors, vibrant) , rgba(173, 147, 198, 0.5));
+                    background: -o-linear-gradient(bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
+                    background: -moz-linear-gradient(bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
+                    background: linear-gradient(to bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
+                }
             }
         }
         .timeline-main-user{
             margin-top: -5px;
             ion-card{
                 border-right: 10px solid color($colors, secondary);
-                margin-left: -5px;
              }
             ion-note{
-                margin-left: 10px;
-                margin-left: 35px;
+                 margin-left: 4%;
             }
         }
         .timeline-main-other{
-            margin-top: -5px;
              ion-card{
                 border-left: 10px solid color($colors, subtle);
             }
             ion-note{
-                margin-left: 150px;
+                margin-right: 4%;
             }
         }
 
+    }
+
+
+    .timeline-bar {
+        background-image: url(../assets/img/timeline-bar.png);
+    }
+    .timeline-day {
+        background-image: url(../assets/img/timeline-day.png);
     }
 
 }

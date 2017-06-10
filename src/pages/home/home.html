@@ -5,6 +5,11 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Panel de Control</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -21,18 +26,18 @@
     <ion-grid>
 
       <ion-row class="text-location-status">
-        <ion-col col-auto>
+        <ion-col col-8 text-start>
           <ion-icon color="primary" name="pin"></ion-icon>
           Calle: desafio del m....
         </ion-col>
-        <ion-col col-auto push-3>
+        <ion-col col-4 text-end>
           Abierto:
           <ion-icon color="secondary" name="checkmark-circle"></ion-icon>
         </ion-col>
       </ion-row>
 
-      <ion-row class="timeline-icon">
-        <ion-col col-auto push-5>
+      <ion-row class="timeline-icon" justify-content-center>
+        <ion-col col-auto>
           <div class="circle"></div>
           <ion-icon name="infinite"></ion-icon>
           <ion-note>
@@ -41,16 +46,13 @@
         </ion-col>
       </ion-row>
 
-      <ion-row>
-        <svg height="50" width="300">
-          <line x1="155" y1="0" x2="155" y2="50" style="stroke:rgba(255,0,255,0.5);stroke-width:2" />
-        </svg>
-
+      <ion-row class="timeline-icon" justify-content-center>
+        <img src="assets/img/timeline-bar.png" height="60px" />
       </ion-row>
 
       <ion-row class="timeline-main-user">
         <ion-col class="msg" col-8>
-          <ion-card>
+          <ion-card float-start>
             <ion-card-header>
               Card Header
             </ion-card-header>
@@ -64,15 +66,13 @@
         </ion-col>
       </ion-row>
 
-      <ion-row>
-        <svg height="50" width="300">
-          <line x1="155" y1="0" x2="155" y2="50" style="stroke:rgba(255,0,255,0.5);stroke-width:2" />
-        </svg>
+      <ion-row class="timeline-icon" justify-content-center>
+        <img src="assets/img/timeline-bar.png" height="60px" />
       </ion-row>
 
       <ion-row class="timeline-main-other">
         <ion-col class="msg" col-8 push-4>
-          <ion-card>
+          <ion-card float-end>
             <ion-card-header>
               Card Header
             </ion-card-header>
@@ -80,17 +80,21 @@
               content
             </ion-card-content>
           </ion-card>
-          <ion-note>
+          <ion-note float-end>
             13:15
           </ion-note>
         </ion-col>
       </ion-row>
 
-      <ion-row>
-        <svg height="50" width="300">
-          <line x1="155" y1="0" x2="155" y2="50" style="stroke:rgba(255,0,255,0.5);stroke-width:2" />
-        </svg>
+      <ion-row class="timeline-icon" justify-content-center>
+        <img src="assets/img/timeline-bar.png" height="60px" />
       </ion-row>
+      <br>
+      <ion-row class="timeline-icon" justify-content-center>
+        <img src="assets/img/timeline-day.png" height="60px" />
+      </ion-row>
+
+
 
     </ion-grid>
     <!--./timeline-->
