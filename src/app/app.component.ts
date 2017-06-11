@@ -30,18 +30,18 @@ export class MyApp {
 
   firstSectionPages: PageInterface[] = [
     { title: 'Panel de control', name: 'TabsPage', component: TabsPage, tabComponent: HomePage, index: 0, icon: 'home' },
-    { title: 'Nueva Venta', name: 'TabsPage', component: TabsPage, tabComponent: HomePage, index: 1, icon: 'cart' },
-    { title: 'Balance de Ventas', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 2, icon: 'stats' },
+    { title: 'Nueva Venta', name: 'TabsPage', component: TabsPage, tabComponent: HomePage, index: 0, icon: 'cart' },
+    { title: 'Balance de Ventas', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'stats' },
   ];
   secondSectionPages: PageInterface[] = [
-    { title: 'Añadir stock', name: 'TabsPage', component: TabsPage, tabComponent: ContactPage, index: 3, icon: 'add-circle' },
-    { title: 'Stock disponible', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 4, icon: 'cube' },
-    { title: 'Proveedores', name: 'TabsPage', component: TabsPage, tabComponent: ContactPage, index: 5, icon: 'contacts' },
+    { title: 'Añadir stock', name: 'TabsPage', component: TabsPage, tabComponent: ContactPage, index: 2, icon: 'add-circle' },
+    { title: 'Stock disponible', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'cube' },
+    { title: 'Proveedores', name: 'TabsPage', component: TabsPage, tabComponent: ContactPage, index: 2, icon: 'contacts' },
   ];
   otherPages: PageInterface[] = [
-    { title: 'Mi cuenta', name: 'TabsPage', component: TabsPage, tabComponent: ContactPage, index: 6, icon: 'contact' },
-    { title: 'Ayuda', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 7, icon: 'help-circle' },
-    { title: 'Salir', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 8, icon: 'power' }
+    { title: 'Mi cuenta', name: 'TabsPage', component: TabsPage, tabComponent: ContactPage, index: 2, icon: 'contact' },
+    { title: 'Ayuda', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'help-circle' },
+    { title: 'Salir', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'power' }
 
   ];
 
@@ -76,5 +76,23 @@ export class MyApp {
         console.log(`Didn't set nav root: ${err}`);
       });
     }
+  }
+
+
+  isActive(page: PageInterface) {
+    let childNav = this.nav.getActiveChildNav();
+
+    // Tabs are a special case because they have their own navigation
+    if (childNav) {
+      if (childNav.getSelected() && childNav.getSelected().root === page.tabComponent) {
+        return 'primary';
+      }
+      return;
+    }
+
+    if (this.nav.getActive() && this.nav.getActive().name === page.name) {
+      return 'primary';
+    }
+    return;
   }
 }
