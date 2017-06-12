@@ -7,6 +7,7 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { PopoverPage } from '../pages/navbar-popover/navbar-popover';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,6 +20,7 @@ import { ElasticHeaderDirective } from '../directives/elastic-header/elastic-hea
     ContactPage,
     HomePage,
     TabsPage,
+    PopoverPage,
     ElasticHeaderDirective
   ],
   imports: [
@@ -30,13 +32,14 @@ import { ElasticHeaderDirective } from '../directives/elastic-header/elastic-hea
     MyApp,
     AboutPage,
     ContactPage,
+    PopoverPage,
     HomePage,
     TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

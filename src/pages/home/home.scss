@@ -96,16 +96,19 @@ page-home {
                 margin-right: 4%;
             }
         }
+        .timeline-day{
+            ion-item{
+            background: color($colors, vibrant-bright);
+            color: color($colors, light);
+            border-radius: 20%;
+            max-width: 60%;
+            box-shadow: 5px 5px 5px color($colors, shadow);
+            }
+        }
 
     }
 
 
-    .timeline-bar {
-        background-image: url(../assets/img/timeline-bar.png);
-    }
-    .timeline-day {
-        background-image: url(../assets/img/timeline-day.png);
-    }
 
 }
 
