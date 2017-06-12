@@ -25,8 +25,8 @@
                 <ion-list-header>
                     Ventas
                 </ion-list-header>
-                <button ion-item menuClose *ngFor="let p of firstSectionPages" (click)="openPage(p)">
-                    <ion-icon item-start [name]="p.icon" isActive="true"></ion-icon>
+                <button ion-item menuClose *ngFor="let p of firstSectionPages" (click)="openPage(p)" >
+                    <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
                     {{p.title}}
                 </button>
             </ion-list>
@@ -35,8 +35,8 @@
                 <ion-list-header>
                     Stock
                 </ion-list-header>
-                <button ion-item menuClose *ngFor="let p of secondSectionPages" (click)="openPage(p)">
-          <ion-icon item-start [name]="p.icon" isActive="false"></ion-icon>
+                <button ion-item menuClose *ngFor="let p of secondSectionPages" (click)="openPage(p)" >
+          <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
           {{p.title}}
         </button>
             </ion-list>
@@ -45,10 +45,10 @@
                 <ion-list-header>
                     Otros
                 </ion-list-header>
-                <button ion-item menuClose *ngFor="let p of otherPages" (click)="openPage(p)">
-          <ion-icon item-start [name]="p.icon" isActive="p.isActive"></ion-icon>
-          {{p.title}}
-        </button>
+                <button ion-item menuClose *ngFor="let p of otherPages" (click)="openPage(p)" >
+                    <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+                    {{p.title}}
+                </button>
             </ion-list>
         </ion-content>
 

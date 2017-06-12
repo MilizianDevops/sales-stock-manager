@@ -1,20 +1,108 @@
 <ion-header>
+
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Panel de Control</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content elastic-header>
+
+  <!-- Elastic-header main image -->
+  <div class="background-image"></div>
+
+  <!--main-->
+  <div class="main-content">
+
+    <!--timeline-->
+    <ion-grid>
+
+      <ion-row class="text-location-status">
+        <ion-col col-8 text-start>
+          <ion-icon color="primary" name="pin"></ion-icon>
+          Calle: desafio del m....
+        </ion-col>
+        <ion-col col-4 text-end>
+          Abierto:
+          <ion-icon color="secondary" name="checkmark-circle"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="timeline-icon" justify-content-center>
+        <ion-col col-auto>
+          <div class="circle"></div>
+          <ion-icon name="infinite"></ion-icon>
+          <ion-note>
+            Timeline
+          </ion-note>
+        </ion-col>
+      </ion-row>
+
+      <ion-row justify-content-center>
+        <img src="assets/img/timeline-bar.png" height="60px" />
+      </ion-row>
+
+      <ion-row class="timeline-main-user">
+        <ion-col class="msg" col-8>
+          <ion-card float-start>
+            <ion-card-header>
+              Card Header
+            </ion-card-header>
+            <ion-card-content>
+              content
+            </ion-card-content>
+          </ion-card>
+          <ion-note>
+            12:50
+          </ion-note>
+        </ion-col>
+      </ion-row>
+
+      <ion-row justify-content-center>
+        <img src="assets/img/timeline-bar.png" height="60px" />
+      </ion-row>
+
+      <ion-row class="timeline-main-other">
+        <ion-col class="msg" col-8 push-4>
+          <ion-card float-end>
+            <ion-card-header>
+              Card Header
+            </ion-card-header>
+            <ion-card-content>
+              content
+            </ion-card-content>
+          </ion-card>
+          <ion-note float-end>
+            13:15
+          </ion-note>
+        </ion-col>
+      </ion-row>
+
+      <ion-row justify-content-center>
+        <img src="assets/img/timeline-bar.png" height="60px" />
+      </ion-row>
+      <br>
+      <ion-row class="timeline-day" justify-content-center>
+        <ion-item text-center>
+          9 Junio 2017
+        </ion-item>
+      </ion-row>
+
+
+
+    </ion-grid>
+    <!--./timeline-->
+
+  </div>
+  <!--/main-->
+
+
 </ion-content>

@@ -1,3 +1,120 @@
 page-home {
+    .background-image {
+        background-image: url(../assets/img/blur-home-bg.png);
+        @media screen and (orientation:portrait) {
+            background-size: cover;
+            background-position: 50% 80%;
+            height: 25%;
+        }
+
+        @media screen and (orientation:landscape) {
+            background-size: cover;
+            background-position: 50% 65%;
+            height: 50%;
+        }
+    }
+
+    .main-content {
+        padding: 20px;
+        background-color: white;
+        width: 100%;
+        position: absolute;
+        .text-location-status {
+            font-size: 15px;
+            font-variant: small-caps;
+            ion-icon {
+                font-size: 25px;
+            }
+        }
+        .timeline-icon {
+            @media screen and (orientation:portrait) {
+                ion-icon {
+                    margin-left: 10px;
+                    top: 25px;
+                    font-size: 33px;
+                    position: absolute;
+                    color: white;
+                }
+                ion-note{
+                    margin-left: -5px;
+                    font-variant: small-caps;
+                    font-weight: bold;
+                    font-size: 17px;
+                }
+                .circle {
+                    border-radius: 50%;
+                    margin-top: 10px;
+                    width: 50px;
+                    height: 50px;
+                    background: -webkit-gradient(left top, color($colors, vibrant-bright), color($colors, vibrant) , rgba(173, 147, 198, 0.5));
+                    background: -o-linear-gradient(bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
+                    background: -moz-linear-gradient(bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
+                    background: linear-gradient(to bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
+                }
+            }
+            @media screen and (orientation:landscape) {
+                ion-icon {
+                    margin-left: 11px;
+                    top: 25px;
+                    font-size: 33px;
+                    position: absolute;
+                    color: white;
+                }
+                ion-note{
+                    margin-left: -4px;
+                    font-variant: small-caps;
+                    font-weight: bold;
+                    font-size: 17px;
+                }
+                .circle {
+                    border-radius: 50%;
+                    margin-top: 10px;
+                    margin-left: -1px;
+                    width: 50px;
+                    height: 50px;
+                    background: -webkit-gradient(left top, color($colors, vibrant-bright), color($colors, vibrant) , rgba(173, 147, 198, 0.5));
+                    background: -o-linear-gradient(bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
+                    background: -moz-linear-gradient(bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
+                    background: linear-gradient(to bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
+                }
+            }
+        }
+        .timeline-main-user{
+            margin-top: -5px;
+            ion-card{
+                border-right: 10px solid color($colors, secondary);
+             }
+            ion-note{
+                 margin-left: 4%;
+            }
+        }
+        .timeline-main-other{
+             ion-card{
+                border-left: 10px solid color($colors, subtle);
+            }
+            ion-note{
+                margin-right: 4%;
+            }
+        }
+        .timeline-day{
+            ion-item{
+            background: color($colors, vibrant-bright);
+            color: color($colors, light);
+            border-radius: 20%;
+            max-width: 60%;
+            box-shadow: 5px 5px 5px color($colors, shadow);
+            }
+        }
+
+    }
+
+
 
 }
+
+
+
+
+
+
+
