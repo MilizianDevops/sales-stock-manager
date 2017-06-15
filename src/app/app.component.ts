@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
+import { StockPage } from '../pages/stock/stock';
 import { HomePage } from '../pages/home/home';
 
 
@@ -34,12 +34,12 @@ export class MyApp {
     { title: 'Balance de Ventas', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'stats' },
   ];
   secondSectionPages: PageInterface[] = [
-    { title: 'Añadir stock', name: 'TabsPage', component: TabsPage, tabComponent: ContactPage, index: 2, icon: 'add-circle' },
+    { title: 'Añadir stock', name: 'TabsPage', component: TabsPage, tabComponent: StockPage, index: 2, icon: 'add-circle' },
     { title: 'Stock disponible', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'cube' },
-    { title: 'Proveedores', name: 'TabsPage', component: TabsPage, tabComponent: ContactPage, index: 2, icon: 'contacts' },
+    { title: 'Proveedores', name: 'TabsPage', component: TabsPage, tabComponent: StockPage, index: 2, icon: 'contacts' },
   ];
   otherPages: PageInterface[] = [
-    { title: 'Mi cuenta', name: 'TabsPage', component: TabsPage, tabComponent: ContactPage, index: 2, icon: 'contact' },
+    { title: 'Mi cuenta', name: 'TabsPage', component: TabsPage, tabComponent: StockPage, index: 2, icon: 'contact' },
     { title: 'Ayuda', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'help-circle' },
     { title: 'Salir', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'power' }
 

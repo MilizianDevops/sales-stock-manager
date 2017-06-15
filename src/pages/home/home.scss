@@ -46,10 +46,10 @@ page-home {
                     margin-top: 10px;
                     width: 50px;
                     height: 50px;
-                    background: -webkit-gradient(left top, color($colors, vibrant-bright), color($colors, vibrant) , rgba(173, 147, 198, 0.5));
-                    background: -o-linear-gradient(bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
-                    background: -moz-linear-gradient(bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
-                    background: linear-gradient(to bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
+                    background: -webkit-gradient(left top, color($colors, primary-bright), color($colors, primary) , rgba(173, 147, 198, 0.5));
+                    background: -o-linear-gradient(bottom right,color($colors, primary-bright), color($colors, primary), rgba(173, 147, 198, 0.5));
+                    background: -moz-linear-gradient(bottom right,color($colors, primary-bright), color($colors, primary), rgba(173, 147, 198, 0.5));
+                    background: linear-gradient(to bottom right,color($colors, primary-bright), color($colors, primary), rgba(173, 147, 198, 0.5));
                 }
             }
             @media screen and (orientation:landscape) {
@@ -72,10 +72,10 @@ page-home {
                     margin-left: -1px;
                     width: 50px;
                     height: 50px;
-                    background: -webkit-gradient(left top, color($colors, vibrant-bright), color($colors, vibrant) , rgba(173, 147, 198, 0.5));
-                    background: -o-linear-gradient(bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
-                    background: -moz-linear-gradient(bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
-                    background: linear-gradient(to bottom right,color($colors, vibrant-bright), color($colors, vibrant), rgba(173, 147, 198, 0.5));
+                    background: -webkit-gradient(left top, color($colors, primary-bright), color($colors, primary) , rgba(173, 147, 198, 0.5));
+                    background: -o-linear-gradient(bottom right,color($colors, primary-bright), color($colors, primary), rgba(173, 147, 198, 0.5));
+                    background: -moz-linear-gradient(bottom right,color($colors, primary-bright), color($colors, primary), rgba(173, 147, 198, 0.5));
+                    background: linear-gradient(to bottom right,color($colors, primary-bright), color($colors, primary), rgba(173, 147, 198, 0.5));
                 }
             }
         }
@@ -98,7 +98,7 @@ page-home {
         }
         .timeline-day{
             ion-item{
-            background: color($colors, vibrant-bright);
+            background: color($colors, primary-bright);
             color: color($colors, light);
             border-radius: 20%;
             max-width: 60%;
