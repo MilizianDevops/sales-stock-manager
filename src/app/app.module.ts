@@ -4,7 +4,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
+import { StockPage } from '../pages/stock/stock';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PopoverPage } from '../pages/navbar-popover/navbar-popover';
@@ -17,7 +17,7 @@ import { ElasticHeaderDirective } from '../directives/elastic-header/elastic-hea
   declarations: [
     MyApp,
     AboutPage,
-    ContactPage,
+    StockPage,
     HomePage,
     TabsPage,
     PopoverPage,
@@ -31,7 +31,7 @@ import { ElasticHeaderDirective } from '../directives/elastic-header/elastic-hea
   entryComponents: [
     MyApp,
     AboutPage,
-    ContactPage,
+    StockPage,
     PopoverPage,
     HomePage,
     TabsPage
