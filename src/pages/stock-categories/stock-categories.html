@@ -28,11 +28,11 @@
 
   <ion-list (swipe)="swipeEvent($event)">
     <div class="card-page-xxl" *ngIf="show">
-      <div *ngFor="let item of items">
-        <ion-card>
+      <div *ngFor="let category of categories">
+        <ion-card (click)="goToCategoryDetail(category)">
           <img src="https://images.pexels.com/photos/1240/road-street-blur-blurred.jpg?w=940&h=650&auto=compress&cs=tinysrgb " />
           <div class="card-title ">
-            {{item}}
+            {{category}}
           </div>
           <div class="card-subtitle ">{{swipe}}</div>
         </ion-card>
@@ -41,11 +41,11 @@
 
     <ion-grid class="card-page-md" *ngIf="!show">
       <ion-row justify-content-center>
-        <ion-col *ngFor="let item of items; let i = index" col-6>
-          <ion-card>
+        <ion-col *ngFor="let category of categories; let i = index" col-6>
+          <ion-card (click)="goToCategoryDetail(category)">
             <img src="https://images.pexels.com/photos/1240/road-street-blur-blurred.jpg?w=940&h=650&auto=compress&cs=tinysrgb " />
             <div class="card-title ">
-              {{item}}
+              {{category}}
             </div>
             <div class="card-subtitle ">{{swipe}}</div>
           </ion-card>
