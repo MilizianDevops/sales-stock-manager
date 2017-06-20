@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ToastController } from 'ionic-angular';
 
 
 @Component({
@@ -10,8 +10,35 @@ import { NavController, NavParams } from 'ionic-angular';
 export class StockDetailCategoriesPage {
     category: any;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+    show: boolean = true;
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
         this.category = this.navParams.data.category;
+    }
+
+    onInput(e) {
+        this.showToastWithCloseButton();
+    }
+
+    onCancel(e) {
+        this.showToastWithCloseButton();
+    }
+
+
+    presentFilter() {
+        this.showToastWithCloseButton();
+    }
+
+
+    showToastWithCloseButton() {
+        const toast = this.toastCtrl.create({
+            message: 'Not implememted yet, we are working on it.',
+            showCloseButton: true,
+            closeButtonText: 'Ok',
+            duration: 3000
+        });
+        toast.present();
     }
 
 }

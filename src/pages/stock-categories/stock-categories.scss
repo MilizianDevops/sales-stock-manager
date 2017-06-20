@@ -8,6 +8,10 @@ page-categories-stock {
             ion-card {
                 position: relative;
                 text-align: center;
+                height: 10.5em;
+                img{
+                    filter: blur(3px);
+                }
             }
 
             .card-title {
@@ -22,7 +26,7 @@ page-categories-stock {
             .card-subtitle {
                 font-size: 1.0em;
                 position: absolute;
-                top: 52%;
+                top: 65%;
                 width: 100%;
                 color: #fff;
             }
@@ -37,12 +41,16 @@ page-categories-stock {
                 width: 100%;
                 margin-top: -2%;
                 margin-left: -0.25%;
+                height: 6.5em;
+                img{
+                    filter: blur(3px);
+                }
             }
 
             .card-title {
                 position: absolute;
                 top: 30%;
-                font-size: 2.0em;
+                font-size: 1.5em;
                 width: 100%;
                 font-weight: bold;
                 color: #fff;

@@ -11,13 +11,10 @@ export class StockCategoriesPage {
 
   public categories: Array<any> = new Array();
 
-  public swipe: number = 0;
-
-
   show: boolean = true;
 
   constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 20; i++) {
       this.categories.push(`Categoria:  ${i}`);
     }
   }
@@ -69,7 +66,6 @@ export class StockCategoriesPage {
 
   swipeEvent(e) {
     console.log('Soy e' + e);
-    this.swipe++
   }
 
 
