@@ -1,21 +1,77 @@
 <ion-header>
     <ion-navbar>
         <ion-title>{{category}}</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="show = !show">
+        <ion-icon [name]="show? 'grid': 'list-box'"></ion-icon>
+      </button>
+            <button ion-button icon-only (click)="presentFilter()">
+        <ion-icon ios="ios-options-outline" md="md-options"></ion-icon>
+      </button>
+        </ion-buttons>
     </ion-navbar>
+    <ion-toolbar>
+        <ion-searchbar dark placeholder="Filtra los productos..." [(ngModel)]="myInput" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)"
+            color="primary" showCancelButton animated>
+        </ion-searchbar>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <ion-list>
-        <ion-list-header>
-            Action
-        </ion-list-header>
-        <ion-item>
-            <ion-avatar item-start>
-                <img src="https://images.pexels.com/photos/1240/road-street-blur-blurred.jpg?w=940&h=650&auto=compress&cs=tinysrgb " />
-            </ion-avatar>
-            <h2>Finn</h2>
-            <h3>Don't Know What To Do!</h3>
-            <p>I've had a pretty messed up day. If we just...</p>
-        </ion-item>
+<ion-content class="content-stock-detail" padding>
+    <ion-list *ngIf="show" class="card-page-xxl">
+        <ion-card>
+            <ion-grid no-padding>
+                <ion-row>
+                    <ion-col col-3 justify-content-center>
+                        <img src="http://www.cobopa.com/archivos/catalogo/2021-Napo-Gigante-Chocolate-375x325.gif">
+                    </ion-col>
+                    <ion-col col-9>
+                        <ion-item>
+                            <h2>Product X</h2>
+                            <p>Short description</p>
+                            <ion-badge item-end>26</ion-badge>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card>
+
     </ion-list>
+
+
+    <ion-grid *ngIf="!show" class="card-page-md">
+
+        <ion-grid no-padding>
+            <ion-row>
+                <ion-col col-6 justify-content-center>
+                    <ion-card>
+                        <img src="http://www.cobopa.com/archivos/catalogo/2021-Napo-Gigante-Chocolate-375x325.gif">
+                        <ion-item>
+                            <h2>Product X</h2>
+                            <p>Short description</p>
+                            <ion-badge item-end>27</ion-badge>
+                        </ion-item>
+                    </ion-card>
+                </ion-col>
+                <ion-col col-6 justify-content-center>
+                    <ion-card>
+                        <img src="http://www.cobopa.com/archivos/catalogo/2021-Napo-Gigante-Chocolate-375x325.gif">
+                        <ion-item>
+                            <h2>Product X</h2>
+                            <p>Short description</p>
+                            <ion-badge item-end>27</ion-badge>
+                        </ion-item>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+    </ion-grid>
+
+
+
+
+    <ion-fab right bottom>
+        <button ion-fab color="energized-bright"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
 </ion-content>
