@@ -7,6 +7,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { AboutPage } from '../pages/about/about';
 import { StockCategoriesPage } from '../pages/stock-categories/stock-categories';
 import { HomePage } from '../pages/home/home';
+import { SuppliersPage } from '../pages/suppliers/suppliers';
 
 
 export interface PageInterface {
@@ -35,7 +36,7 @@ export class MyApp {
   ];
   secondSectionPages: PageInterface[] = [
     { title: 'Stock', name: 'TabsPage', component: TabsPage, tabComponent: StockCategoriesPage, index: 2, icon: 'cube' },
-    { title: 'Proveedores', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'contacts' },
+    { title: 'Proveedores', name: 'TabsPage', component: TabsPage, tabComponent: SuppliersPage, index: 3, icon: 'contacts' },
   ];
   otherPages: PageInterface[] = [
     { title: 'Mi cuenta', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'contact' },

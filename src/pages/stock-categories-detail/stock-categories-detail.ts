@@ -10,11 +10,19 @@ import { NavController, NavParams, ToastController } from 'ionic-angular';
 export class StockDetailCategoriesPage {
     category: any;
 
+    public products: Array<any> = new Array();
 
     show: boolean = true;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
         this.category = this.navParams.data.category;
+        for (let i = 0; i < 20; i++) {
+            this.products.push(`${this.category}--->  ${i}`);
+        }
+    }
+
+    isFinished(n: number) {
+        return !(n > 0);
     }
 
     onInput(e) {

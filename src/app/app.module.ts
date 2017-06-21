@@ -9,6 +9,7 @@ import { StockDetailCategoriesPage } from '../pages/stock-categories-detail/stoc
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PopoverPage } from '../pages/navbar-popover/navbar-popover';
+import { SuppliersPage } from '../pages/suppliers/suppliers';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,6 +24,7 @@ import { ElasticHeaderDirective } from '../directives/elastic-header/elastic-hea
     HomePage,
     TabsPage,
     PopoverPage,
+    SuppliersPage,
     ElasticHeaderDirective
   ],
   imports: [
@@ -42,7 +44,8 @@ import { ElasticHeaderDirective } from '../directives/elastic-header/elastic-hea
           { component: StockCategoriesPage, name: 'StockCategories', segment: 'stockcategories' },
           { component: StockDetailCategoriesPage, name: 'StockCategoriesDetail', segment: 'stockcategoriesdetail/:category' },
           { component: HomePage, name: 'Home', segment: 'home' },
-          { component: AboutPage, name: 'About', segment: 'about' }
+          { component: AboutPage, name: 'About', segment: 'about' },
+          { component: SuppliersPage, name: 'Suppliers', segment: 'suppliers' }
         ]
       }
     )],
@@ -54,6 +57,7 @@ import { ElasticHeaderDirective } from '../directives/elastic-header/elastic-hea
     StockDetailCategoriesPage,
     PopoverPage,
     HomePage,
+    SuppliersPage,
     TabsPage
   ],
   providers: [
