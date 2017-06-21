@@ -17,9 +17,9 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content class="content-stock-detail" padding>
-    <ion-list *ngIf="show" class="card-page-xxl">
-        <ion-card>
+<ion-content class="content-stock-detail">
+    <ion-list *ngIf="show" class="card-page-list">
+        <ion-card *ngFor="let product of products">
             <ion-grid no-padding>
                 <ion-row>
                     <ion-col col-3 justify-content-center>
@@ -27,9 +27,14 @@
                     </ion-col>
                     <ion-col col-9>
                         <ion-item>
-                            <h2>Product X</h2>
-                            <p>Short description</p>
-                            <ion-badge item-end>26</ion-badge>
+                            <h2>{{product}}</h2>
+                            <p>
+                                <ion-icon name="cloud-download"></ion-icon> 25 feb 12:50
+                            </p>
+                            <p>
+                                <ion-icon name="contacts"></ion-icon> Bolleria Pedrin S.L.
+                            </p>
+                            <ion-badge [color]="isFinished(0)? 'danger': 'secondary'" item-end>0</ion-badge>
                         </ion-item>
                     </ion-col>
                 </ion-row>
@@ -39,33 +44,24 @@
     </ion-list>
 
 
-    <ion-grid *ngIf="!show" class="card-page-md">
-
-        <ion-grid no-padding>
-            <ion-row>
-                <ion-col col-6 justify-content-center>
-                    <ion-card>
-                        <img src="http://www.cobopa.com/archivos/catalogo/2021-Napo-Gigante-Chocolate-375x325.gif">
-                        <ion-item>
-                            <h2>Product X</h2>
-                            <p>Short description</p>
-                            <ion-badge item-end>27</ion-badge>
-                        </ion-item>
-                    </ion-card>
-                </ion-col>
-                <ion-col col-6 justify-content-center>
-                    <ion-card>
-                        <img src="http://www.cobopa.com/archivos/catalogo/2021-Napo-Gigante-Chocolate-375x325.gif">
-                        <ion-item>
-                            <h2>Product X</h2>
-                            <p>Short description</p>
-                            <ion-badge item-end>27</ion-badge>
-                        </ion-item>
-                    </ion-card>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-
+    <ion-grid *ngIf="!show" class="card-page-grid" no-padding>
+        <ion-row>
+            <ion-col col-6 justify-content-center *ngFor="let product of products">
+                <ion-card>
+                    <img src="http://www.cobopa.com/archivos/catalogo/2021-Napo-Gigante-Chocolate-375x325.gif">
+                    <ion-badge [color]="isFinished(27)? 'danger': 'secondary'" item-end>27</ion-badge>
+                    <ion-item>
+                        <h2>{{product}}</h2>
+                        <p>
+                            <ion-icon name="cloud-download"></ion-icon> 25 feb 12:50
+                        </p>
+                        <p>
+                            <ion-icon name="contacts"></ion-icon> Bolleria Pedrin S.L.
+                        </p>
+                    </ion-item>
+                </ion-card>
+            </ion-col>
+        </ion-row>
     </ion-grid>
 
 
