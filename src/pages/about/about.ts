@@ -7,8 +7,19 @@ import { NavController } from 'ionic-angular';
 })
 export class AboutPage {
 
-  constructor(public navCtrl: NavController) {
+  public products: Array<any> = new Array();
 
+  constructor(public navCtrl: NavController) {
+    for(let i = 1; i <= 5; i++){
+      this.products.push(`Producto ${i}`);
+    }
   }
+
+  ionViewDidLoad() {
+  }
+
+  isFinished(n: number) {
+        return !(n > 0);
+    }
 
 }

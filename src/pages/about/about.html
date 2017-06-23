@@ -3,10 +3,64 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>About</ion-title>
+    <ion-title>Ventas</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class="content-sales">
+
+  <img src="../../assets/img/Chart-JS.png">
+  <p>Este es tu volúmen de ventas</p>
+
+  <h6>Los 5 artículos más vendidos en el último mes...</h6>
+  <ion-card *ngFor="let product of products">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col col-3 justify-content-center>
+          <img src="http://www.cobopa.com/archivos/catalogo/2021-Napo-Gigante-Chocolate-375x325.gif">
+        </ion-col>
+        <ion-col col-9>
+          <ion-item>
+            <h2>{{product}}</h2>
+            <p>
+              <ion-icon name="calendar"></ion-icon> 25 feb 12:50
+            </p>
+            <p>
+              <ion-icon name="contacts"></ion-icon> Bolleria Pedrin S.L.
+            </p>
+            <ion-badge [color]="isFinished(5)? 'danger': 'secondary'" item-end>5</ion-badge>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <h6>Los 5 artículos menos vendidos en el último mes...</h6>
+  <ion-card *ngFor="let product of products">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col col-3 justify-content-center>
+          <img src="http://www.cobopa.com/archivos/catalogo/2021-Napo-Gigante-Chocolate-375x325.gif">
+        </ion-col>
+        <ion-col col-9>
+          <ion-item>
+            <h2>{{product}}</h2>
+            <p>
+              <ion-icon name="calendar"></ion-icon> 25 feb 12:50
+            </p>
+            <p>
+              <ion-icon name="contacts"></ion-icon> Bolleria Pedrin S.L.
+            </p>
+            <ion-badge [color]="isFinished(0)? 'danger': 'secondary'" item-end>0</ion-badge>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-fab right bottom>
+    <button ion-fab color="energized-bright"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
 
 </ion-content>
