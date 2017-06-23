@@ -7,6 +7,41 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class="suppliers-contact">
 
+    <ion-scroll class="scroll-horizontal" scrollX="true">
+        <ion-grid>
+            <ion-row class="recent-contact">
+                <ion-col *ngFor="let supplier of suppliers" width-1500>
+                    <ion-icon class="absolute-left" name="more"></ion-icon>
+                    <img src="https://es.buytra.com/sites/default/files/styles/large/public/newwear-main-images/16-09-12/fashion-korean-exo-wolf-cap-letter-embroidery-flat-brim-hats-100637.jpg?itok=H8m0biSg">
+                    <div class="card-subtitle ">
+                        <ion-icon name="clock" item-start></ion-icon> 24 Junio 23:00:10 <br>
+                        <ion-icon name="contacts" item-start></ion-icon> Pedrin Bolleria S.L.
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-scroll>
+
+
+    <ion-list class="contact-list">
+        <ion-list-header>
+            A
+        </ion-list-header>
+        <ion-item *ngFor="let supplier of suppliers">
+            <img src="https://es.buytra.com/sites/default/files/styles/large/public/newwear-main-images/16-09-12/fashion-korean-exo-wolf-cap-letter-embroidery-flat-brim-hats-100637.jpg?itok=H8m0biSg">
+            <h3> {{supplier}} </h3>
+        </ion-item>
+        <ion-list-header>
+            B
+        </ion-list-header>
+        <ion-list-header>
+            C
+        </ion-list-header>
+        <ion-item *ngFor="let supplier of suppliers">
+            <img src="https://es.buytra.com/sites/default/files/styles/large/public/newwear-main-images/16-09-12/fashion-korean-exo-wolf-cap-letter-embroidery-flat-brim-hats-100637.jpg?itok=H8m0biSg">
+            <h3> {{supplier}} </h3>
+        </ion-item>
+    </ion-list>
 </ion-content>

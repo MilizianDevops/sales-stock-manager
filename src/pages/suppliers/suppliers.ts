@@ -14,7 +14,7 @@ export class SuppliersPage {
     show: boolean = true;
 
     constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < 5; i++) {
             this.suppliers.push(`suppliers: ${i}`);
         }
     }
