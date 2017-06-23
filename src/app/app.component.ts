@@ -5,8 +5,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
+import { StockCategoriesPage } from '../pages/stock-categories/stock-categories';
 import { HomePage } from '../pages/home/home';
+import { SuppliersPage } from '../pages/suppliers/suppliers';
 
 
 export interface PageInterface {
@@ -30,18 +31,17 @@ export class MyApp {
 
   firstSectionPages: PageInterface[] = [
     { title: 'Panel de control', name: 'TabsPage', component: TabsPage, tabComponent: HomePage, index: 0, icon: 'home' },
-    { title: 'Nueva Venta', name: 'TabsPage', component: TabsPage, tabComponent: HomePage, index: 0, icon: 'cart' },
+    { title: 'Ventas', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'cart' },
     { title: 'Balance de Ventas', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'stats' },
   ];
   secondSectionPages: PageInterface[] = [
-    { title: 'Añadir stock', name: 'TabsPage', component: TabsPage, tabComponent: ContactPage, index: 2, icon: 'add-circle' },
-    { title: 'Stock disponible', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'cube' },
-    { title: 'Proveedores', name: 'TabsPage', component: TabsPage, tabComponent: ContactPage, index: 2, icon: 'contacts' },
+    { title: 'Stock', name: 'TabsPage', component: TabsPage, tabComponent: StockCategoriesPage, index: 2, icon: 'cube' },
+    { title: 'Proveedores', name: 'TabsPage', component: TabsPage, tabComponent: SuppliersPage, index: 3, icon: 'contacts' },
   ];
   otherPages: PageInterface[] = [
-    { title: 'Mi cuenta', name: 'TabsPage', component: TabsPage, tabComponent: ContactPage, index: 2, icon: 'contact' },
+    { title: 'Mi cuenta', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'contact' },
     { title: 'Ayuda', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'help-circle' },
-    { title: 'Salir', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'power' }
+    { title: 'Salir', name: 'Home', component: HomePage, icon: 'power' }
 
   ];
 

@@ -24,17 +24,19 @@ $font-path: "../assets/fonts";
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:            #2962FF, // #488aff,
+  primary:            #663399, //2962FF, // #488aff,
+  primary-bright:     #8d63b7,
+  primary-alpha:      rgba(141, 99, 183, 0.25),
   secondary:          #32db64,
   danger:             #f53d3d,
   light:              #f4f4f4,
   shadow:             #8d9093,
   dark:               #222,
   energized:          #ffc527,
+  energized-bright:   #ece36d,
   royal:              #b8caf9,
   subtle:             #444444,
-  vibrant:            #663399, // rebeccapurple
-  vibrant-bright:     #8d63b7
+  ionical:            #2962FF
 );
 
 $rounded-radio: 50%;
@@ -45,7 +47,10 @@ $border-radio: 2px;
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
+// Searchbar color set to primary
+$searchbar-ios-input-clear-icon-color: color($colors, primary);
 
+$searchbar-ios-input-text-color: color($colors, primary-bright);
 
 
 // App Material Design Variables
@@ -63,6 +68,11 @@ $checkbox-md-icon-checkmark-color:        #fff;
 
 // Used to show the status bar for component demos
 $cordova-md-statusbar-padding:           29px;
+
+// Searchbar color set to primary
+$searchbar-md-input-search-icon-color: color($colors, primary);
+
+$searchbar-md-input-text-color: color($colors, primary-bright);
 
 
 

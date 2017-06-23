@@ -1,0 +1,57 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Stock</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="show = !show">
+        <ion-icon [name]="show? 'grid': 'list-box'"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="presentFilter()">
+        <ion-icon ios="ios-options-outline" md="md-options"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+  <ion-toolbar>
+    <ion-searchbar dark placeholder="Filtra las categorias..." [(ngModel)]="myInput" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)"
+      color="primary" showCancelButton animated>
+    </ion-searchbar>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content class="content-stock">
+
+  <ion-list *ngIf="show" class="card-page-xxl">
+    <ion-card (click)="goToCategoryDetail(category)" *ngFor="let category of categories">
+      <img src="http://ladelgadita.com/wp-content/uploads/2016/02/bolleria.jpg?id=603" />
+      <div class="card-title ">
+        {{category}}
+      </div>
+      <div class="card-subtitle ">
+        <ion-icon name="folder-open" item-start></ion-icon>
+      </div>
+    </ion-card>
+  </ion-list>
+
+  <ion-grid class="card-page-md" *ngIf="!show">
+    <ion-row justify-content-center>
+      <ion-col *ngFor="let category of categories; let i = index" col-6>
+        <ion-card (click)="goToCategoryDetail(category)">
+          <img src="http://ladelgadita.com/wp-content/uploads/2016/02/bolleria.jpg?id=603" />
+          <div class="card-title ">
+            {{category}}
+          </div>
+          <div class="card-subtitle ">
+            <ion-icon name="folder-open" item-start></ion-icon>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
