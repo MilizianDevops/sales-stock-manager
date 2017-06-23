@@ -1,3 +1,67 @@
 page-suppliers {
+    .suppliers-contact {
+        .scroll-horizontal {
+                white-space: nowrap;
+                height: 35%;
+                overflow: scroll;
+                min-width: 100%;
 
+                .recent-contact {
+                    width: 10000px;
+                    min-height: 100%;
+                    .absolute-left {
+                        position: absolute;
+                        top: 5%;
+                        left: 87%;
+                        font-weight: bold;
+                        font-size: 35px;
+                    }
+                    img {
+                            border-radius: 50%;
+                            border: 2px solid color($colors, primary);
+                            width: 100px;
+                            height: 100px;
+                    }
+                    ion-col {
+                        max-width: 1.5%;
+                        min-height: 100%;
+                        background: linear-gradient(to top left, color($colors, primary-alpha),  color($colors, primary-bright));
+                        border: 2px solid color($colors, primary);
+                        margin-right: 0.2%;
+                        box-shadow: 5px 5px 5px color($colors, shadow);
+                        .card-subtitle {
+                            font-variant: small-caps;
+                            font-weight: bold;
+                            font-size: 13px;
+                            width: 100%;
+                        }
+                    }
+                }
+
+        }
+
+        .contact-list {
+            ion-list-header {
+                font-variant: small-caps;
+                font-weight: bold;
+                font-size: 20px;
+                color: color($colors, primary);
+            }
+            img {
+                border-radius: 50%;
+                border: 2px solid color($colors, primary);
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: 5%;
+            }
+            h3 {
+                margin-left: 20%;
+                font-variant: small-caps;
+                font-weight: bold;
+                font-size: 18px;
+                color: color($colors, primary);
+            }
+        }
+    }
 }
