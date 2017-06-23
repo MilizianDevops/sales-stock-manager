@@ -12,7 +12,7 @@
   <img src="../../assets/img/Chart-JS.png">
   <p>Este es tu volúmen de ventas</p>
 
-  <h6>Los 5 artículos más vendidos en el último mes...</h6>
+  <h6 class="more">TOP 5 más vendidos</h6>
   <ion-card *ngFor="let product of products">
     <ion-grid no-padding>
       <ion-row>
@@ -35,7 +35,7 @@
     </ion-grid>
   </ion-card>
 
-  <h6>Los 5 artículos menos vendidos en el último mes...</h6>
+  <h6 class="less">TOP 5 menos vendidos</h6>
   <ion-card *ngFor="let product of products">
     <ion-grid no-padding>
       <ion-row>
@@ -59,7 +59,7 @@
   </ion-card>
 
   <ion-fab right bottom>
-    <button ion-fab color="energized-bright"><ion-icon name="add"></ion-icon></button>
+    <button ion-fab color="energized-bright" (click)="goToNewSale()"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
 
 

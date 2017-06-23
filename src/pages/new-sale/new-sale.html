@@ -1,0 +1,67 @@
+<!--
+  Generated template for the NewSalePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Nueva venta</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="form">
+  <ion-list>
+
+    <ion-item *ngFor="let category of categories">
+      <ion-card (click)="isShown()">
+        <div class="card-title">
+          {{category}}
+        </div>
+      </ion-card>
+      <!--
+      <ion-list *ngIf="show" class="concreteProduct">
+        <ion-card *ngFor="let product of products">
+          <ion-grid no-padding>
+            <ion-row>
+              <ion-col col-3 justify-content-center>
+                <img src="http://www.cobopa.com/archivos/catalogo/2021-Napo-Gigante-Chocolate-375x325.gif">
+              </ion-col>
+              <ion-col col-9>
+                <ion-item>
+                  <h2>{{product}}</h2>
+                  <p>
+                    <ion-icon name="cloud-download"></ion-icon> 25 feb 12:50
+                  </p>
+                  <p>
+                    <ion-icon name="contacts"></ion-icon> Bolleria Pedrin S.L.
+                  </p>
+                  <ion-badge [color]="isFinished(0)? 'danger': 'secondary'" item-end>0</ion-badge>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-list>
+      -->
+
+
+      <!--
+      <ion-select multiple=true>
+        <ion-option *ngFor="let product of products">{{product}}</ion-option>
+      </ion-select>
+      -->
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Precio:</ion-label>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button color="secondary" class="buttons" style="margin-left: 70%"><ion-icon name="checkmark"></ion-icon></button>
+  <button ion-button color="danger" class="buttons" style="margin-left: 85%"><ion-icon name="close"></ion-icon></button>
+</ion-content>

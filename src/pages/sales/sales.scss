@@ -1,0 +1,13 @@
+page-about {
+    .content-sales {
+        ion-fab {
+            margin-right: 3%;
+        }
+        .more {
+            color: color($colors, secondary);
+        }
+        .less {
+            color: color($colors, danger);
+        }
+    }
+}

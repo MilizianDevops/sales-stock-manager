@@ -4,7 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
-import { AboutPage } from '../pages/about/about';
+import { SalesPage } from '../pages/sales/sales';
 import { StockCategoriesPage } from '../pages/stock-categories/stock-categories';
 import { HomePage } from '../pages/home/home';
 import { SuppliersPage } from '../pages/suppliers/suppliers';
@@ -31,16 +31,16 @@ export class MyApp {
 
   firstSectionPages: PageInterface[] = [
     { title: 'Panel de control', name: 'TabsPage', component: TabsPage, tabComponent: HomePage, index: 0, icon: 'home' },
-    { title: 'Ventas', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'cart' },
-    { title: 'Balance de Ventas', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'stats' },
+    { title: 'Ventas', name: 'TabsPage', component: TabsPage, tabComponent: SalesPage, index: 1, icon: 'cart' },
+    { title: 'Balance de Ventas', name: 'TabsPage', component: TabsPage, tabComponent: SalesPage, index: 1, icon: 'stats' },
   ];
   secondSectionPages: PageInterface[] = [
     { title: 'Stock', name: 'TabsPage', component: TabsPage, tabComponent: StockCategoriesPage, index: 2, icon: 'cube' },
     { title: 'Proveedores', name: 'TabsPage', component: TabsPage, tabComponent: SuppliersPage, index: 3, icon: 'contacts' },
   ];
   otherPages: PageInterface[] = [
-    { title: 'Mi cuenta', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'contact' },
-    { title: 'Ayuda', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 1, icon: 'help-circle' },
+    { title: 'Mi cuenta', name: 'TabsPage', component: TabsPage, tabComponent: SalesPage, index: 1, icon: 'contact' },
+    { title: 'Ayuda', name: 'TabsPage', component: TabsPage, tabComponent: SalesPage, index: 1, icon: 'help-circle' },
     { title: 'Salir', name: 'Home', component: HomePage, icon: 'power' }
 
   ];

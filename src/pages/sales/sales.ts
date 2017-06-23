@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { NewSalePage } from '../new-sale/new-sale';
+
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-sales',
+  templateUrl: 'sales.html'
 })
-export class AboutPage {
+export class SalesPage {
 
   public products: Array<any> = new Array();
 
   constructor(public navCtrl: NavController) {
-    for(let i = 1; i <= 5; i++){
+    for (let i = 1; i <= 5; i++) {
       this.products.push(`Producto ${i}`);
     }
   }
@@ -19,7 +21,11 @@ export class AboutPage {
   }
 
   isFinished(n: number) {
-        return !(n > 0);
-    }
+    return !(n > 0);
+  }
+
+  goToNewSale() {
+    this.navCtrl.push(NewSalePage);
+  }
 
 }
