@@ -3,13 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
+import { SalesPage } from '../pages/sales/sales';
 import { StockCategoriesPage } from '../pages/stock-categories/stock-categories';
 import { StockDetailCategoriesPage } from '../pages/stock-categories-detail/stock-categories-detail';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PopoverPage } from '../pages/navbar-popover/navbar-popover';
 import { SuppliersPage } from '../pages/suppliers/suppliers';
+import { NewSalePage } from '../pages/new-sale/new-sale';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,7 +19,8 @@ import { ElasticHeaderDirective } from '../directives/elastic-header/elastic-hea
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
+    SalesPage,
+    NewSalePage,
     StockCategoriesPage,
     StockDetailCategoriesPage,
     HomePage,
@@ -44,7 +46,8 @@ import { ElasticHeaderDirective } from '../directives/elastic-header/elastic-hea
           { component: StockCategoriesPage, name: 'StockCategories', segment: 'stockcategories' },
           { component: StockDetailCategoriesPage, name: 'StockCategoriesDetail', segment: 'stockcategoriesdetail/:category' },
           { component: HomePage, name: 'Home', segment: 'home' },
-          { component: AboutPage, name: 'About', segment: 'about' },
+          { component: SalesPage, name: 'Sales', segment: 'sales' },
+          { component: NewSalePage, name: 'NewSale', segment: 'newSale' },
           { component: SuppliersPage, name: 'Suppliers', segment: 'suppliers' }
         ]
       }
@@ -52,7 +55,8 @@ import { ElasticHeaderDirective } from '../directives/elastic-header/elastic-hea
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
+    SalesPage,
+    NewSalePage,
     StockCategoriesPage,
     StockDetailCategoriesPage,
     PopoverPage,
